@@ -1,0 +1,20 @@
+clear all
+% this sis a comments for matlab
+
+%lets give it a try and see the power foor matlab
+a = 12
+
+fprintf('/n Hello');
+namefile = ['output_' num2str(a) '.txt' ]
+fid = fopen(namefile, 'w');
+
+fprintf(fid, 'hey lol you good blaaaa');
+fprintf(fid, 'a = %g', a);
+fprintf(fid, '\nand the date and time is %s\n',datetime)
+fclose(fid);
+
+N = 10;
+for i=1:N
+    mynumber(i) = rand;
+end
+histogram(mynumber, 20)
