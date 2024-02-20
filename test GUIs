@@ -1,0 +1,17 @@
+import wx
+class FinanceCalc(wx.Frame):
+    def _init_(self,*args,**kwargs):
+        
+        self.initUI()
+    def initUI(control):
+        print("Hello")
+        control.panel1 = wx.Panel(self)
+        
+        btnExit = wx.Button(panel1, wx.ID_ANY, 'EXIT', (50, 50))
+        self.Bind(wx.EVT_BUTTON, self.onExit, id=btnExit.GetId())
+        control.Show(True)
+    def onQuit(self, e):
+        self.Close()
+        
+    def onExit(self, evt):
+        self.Close()
